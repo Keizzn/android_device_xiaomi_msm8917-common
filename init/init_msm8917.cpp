@@ -40,7 +40,7 @@
 #include <android-base/strings.h>
 
 #include "property_service.h"
-#include "vendor_init.h"
+#include <android-base/logging.h>
 
 #include "init_msm8917.h"
 
@@ -48,6 +48,9 @@ using android::base::GetProperty;
 using android::init::property_set;
 using android::base::ReadFileToString;
 using android::base::Trim;
+
+namespace android {
+namespace init {
 
 char const *heapstartsize;
 char const *heapgrowthlimit;
@@ -101,3 +104,6 @@ void vendor_load_properties()
 
     init_target_properties();
 }
+
+}  // namespace init
+}  // namespace android
