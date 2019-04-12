@@ -19,9 +19,7 @@ VENDOR_PATH := device/xiaomi/msm8917-common
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
-    $(VENDOR_PATH)/overlay \
-    $(VENDOR_PATH)/overlay-lineage
-
+    $(VENDOR_PATH)/overlay
 # Properties
 -include $(VENDOR_PATH)/vendor_prop.mk
 
@@ -42,10 +40,6 @@ TARGET_SCREEN_WIDTH := 720
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(VENDOR_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
-
-# Ambient display
-PRODUCT_PACKAGES += \
-    XiaomiDoze
 
 # ANT+
 PRODUCT_PACKAGES += \
